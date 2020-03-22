@@ -28,14 +28,14 @@ namespace Planets_Spaceships
 
             //Dictionary//
             
-            var spacecrafts = new Dictionary<string,List<string>>();
+            var spacecrafts = new Dictionary<string,string>();
 
-            spacecrafts.Add("SpaceX", new List<string>(){"Mars","Saturn","Mercury"});
-            spacecrafts.Add("BlueOrigin", new List<string>(){"Venus","Neptune"});
+            spacecrafts.Add("SpaceX", "Mars,Saturn,Mercury");
+            spacecrafts.Add("BlueOrigin", "Venus,Neptune");
 
-            foreach (var (spacecraft,planet) in planetList)
+            foreach (var (ship, planet) in spacecrafts)
             {
-                Console.WriteLine($"{spacecraft} {planet}");
+                Console.WriteLine($"Ship:{ship},Planets:{planet}");
             }
         }
     }
